@@ -20,6 +20,19 @@ emp_cod SERIAL PRIMARY KEY
 INSERT INTO empleados(emp_nombre, emp_apellido, emp_tel, emp_direc, ciu_cod)
 VALUES('Juan', 'González', '565656', 'algún lugar', 5);
 
+INSERT INTO empleados(emp_nombre, emp_apellido, emp_tel, emp_direc, ciu_cod)
+VALUES('Iker', 'García', '52516', 'algún lugar', 1);
+
+/*
+	Trae todos los empleados y la descripcion de la ciudad
+*/
+SELECT
+	e.emp_nombre, e.emp_apellido, e.ciu_cod, c.ciu_desc
+FROM
+	empleados AS e
+JOIN
+	ciudades AS c ON e.ciu_cod = c.ciu_cod
+
 -- traer todos los registros de empleados
 SELECT * FROM empleados;
 
