@@ -33,6 +33,19 @@ FROM
 JOIN
 	ciudades AS c ON e.ciu_cod = c.ciu_cod
 
+/*
+	Trae todos los empleados y la descripcion de la ciudad sin importar
+	la condicion de mayuscula o minuscula usando el operador ILIKE
+*/
+SELECT
+	e.emp_nombre, e.emp_apellido, e.ciu_cod, c.ciu_desc
+FROM
+	empleados AS e
+JOIN
+	ciudades AS c ON e.ciu_cod = c.ciu_cod
+WHERE
+	c.ciu_desc ILIKE '%ñemby%';
+
 -- traer todos los registros de empleados
 SELECT * FROM empleados;
 
