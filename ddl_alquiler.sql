@@ -35,6 +35,7 @@ CREATE TABLE actores(
 	, act_apellidos VARCHAR(60) NOT NULL
 );
 
+-- relacion peliculas con el actor
 CREATE TABLE actor_peliculas(
 	act_cod INTEGER NOT NULL
 	, pel_cod INTEGER NOT NULL
